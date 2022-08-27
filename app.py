@@ -21,6 +21,7 @@ def result():
         to_predict_list = list(map(float, to_predict_list))
         result = predictor(to_predict_list)
         prediction = str(result)
+        print(prediction)
     return render_template("predict.html",prediction=prediction)
 
 if __name__ == "__main__":

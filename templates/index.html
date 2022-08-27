@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ML Flask with Rasheed</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
 </head>
 <body>
 <!-- component -->
@@ -16,14 +17,10 @@
                 <span>ML Fask Workshop - Full Projects</span> <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline"><br/>Iris Species Classification</span> 
             </h3>
             <p class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">
-                Start gaining the traction you've always wanted with our next-level templates and designs. Crafted to help you tell your story.
+                Classify iris plants into three species in this classic dataset. The Iris dataset was used in R.A. Fisher's classic 1936 paper, The Use of Multiple Measurements in Taxonomic Problems, and can also be found on the UCI Machine Learning Repository.
             </p>
             <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-                <a href="#_" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-green-400 rounded-2xl sm:w-auto sm:mb-0">
-                    Get Started
-                    <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-                <a href="#_" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 rounded-2xl sm:w-auto sm:mb-0">
+                <a href="https://www.kaggle.com/datasets/uciml/iris" class="inline-flex items-center text-gray-100 justify-center w-full px-6 py-3 mb-2 text-lg bg-green-400 rounded-2xl sm:w-auto sm:mb-0">
                     Learn More
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </a>
@@ -46,117 +43,6 @@
     </div>
 </section>
 <!-- component -->
-<style>
-    /*remove custom style*/
-      .circles{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-      .circles li{
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(254, 252, 191,0.5);
-        animation: animate 25s linear infinite;
-        bottom: -150px;  
-    }
-    .circles li:nth-child(1){
-        left: 25%;
-        width: 80px;
-        height: 80px;
-        animation-delay: 0s;
-    }
-     
-     
-    .circles li:nth-child(2){
-        left: 10%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 2s;
-        animation-duration: 12s;
-    }
-     
-    .circles li:nth-child(3){
-        left: 70%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 4s;
-    }
-     
-    .circles li:nth-child(4){
-        left: 40%;
-        width: 60px;
-        height: 60px;
-        animation-delay: 0s;
-        animation-duration: 18s;
-    }
-     
-    .circles li:nth-child(5){
-        left: 65%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 0s;
-    }
-     
-    .circles li:nth-child(6){
-        left: 75%;
-        width: 110px;
-        height: 110px;
-        animation-delay: 3s;
-    }
-     
-    .circles li:nth-child(7){
-        left: 35%;
-        width: 150px;
-        height: 150px;
-        animation-delay: 7s;
-    }
-     
-    .circles li:nth-child(8){
-        left: 50%;
-        width: 25px;
-        height: 25px;
-        animation-delay: 15s;
-        animation-duration: 45s;
-    }
-     
-    .circles li:nth-child(9){
-        left: 20%;
-        width: 15px;
-        height: 15px;
-        animation-delay: 2s;
-        animation-duration: 35s;
-    }
-     
-    .circles li:nth-child(10){
-        left: 85%;
-        width: 150px;
-        height: 150px;
-        animation-delay: 0s;
-        animation-duration: 11s;
-    }
-      @keyframes animate {
-     
-        0%{
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-            border-radius: 0;
-        }
-     
-        100%{
-            transform: translateY(-1000px) rotate(720deg);
-            opacity: 0;
-            border-radius: 50%;
-        }
-     
-    }
-    </style>
     <div class="relative min-h-screen flex mt-8">
         <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
           <div class="sm:w-1/2 xl:w-3/5 h-full hidden md:flex flex-auto items-end justify-end p-10 pr-20 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
@@ -189,31 +75,31 @@
                     <form class="w-full max-w-lg" action="/predict" method="POST">
                             <div class="flex flex-wrap -mx-3 mb-4">
                                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="seplen">
                                         Sepal Length
                                     </label>
-                                    <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-city" type="number" step="0.01"  placeholder="Sepal Length">
+                                    <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-city" type="number" step="0.01" name="seplen"  placeholder="Sepal Length">
                                     </div>
                                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="sepwid">
                                             Sepal Width
                                         </label>
-                                        <input type="number" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-city" step="0.01" placeholder="Sepal Width">
+                                        <input type="number" name="sepwid" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="sepwid" step="0.01" placeholder="Sepal Width">
                                         </div>
                                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="petlwn">
                                                 Petal Length
                                             </label>
-                                            <input type="number" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-city" step="0.01"  placeholder="Petal Length">
+                                            <input type="number" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="petlen" name="petlen" step="0.01"  placeholder="Petal Length">
                                             </div>
                                             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="petwid">
                                                     Petal Width
                                                 </label>
-                                                <input type="number" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="grid-city" step="0.01"  placeholder="Petal Width">
+                                                <input type="number" name="petwid" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-teal-300" id="petwid" step="0.01"  placeholder="Petal Width">
                                                 </div>
                                     </div>
-                                    <div><button type="submit" class="bg-green-400 p-4 text-2xl w-full border-rouded text-gray-100" >Check</button></div>
+                                    <div><input type="submit" class="bg-green-400 p-4 text-2xl w-full border-rouded text-gray-100" value="Check Now" /></div>
                                     </div>
                         </div>
                     </div>
